@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #333;
+  color: #fff;
+}
+/* .top {
+  margin-top: 3rem;
+}
+.top .heading {
+  margin-top: 2rem;
+}
+
+.social-links {
+  text-align: center;
+}
+.action {
+  margin: 2rem auto;
+  height: 25vh;
+}
+.action button {
+  width: 30vh;
+  height: 7vh;
+} */
+
+header .container {
+  margin-top: 2rem;
+  text-align: center;
+}
+header .container h1 {
+  padding: 2rem;
+}
+
+main .action {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  margin-right: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  /* // height: 20vh;
+  //width: 30vw; */
+}
+footer {
+  background-color: #000;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+
+  text-align: center;
+}
+.visible {
+  display: none;
+  visibility: hidden;
+}
+
+select {
+  /* to remove all the style */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #ff6747;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: #ff6747;
+  top: 0;
+  right: 0;
+  transform: translate(0, -2%);
+  padding: 1rem;
+  pointer-events: none;
+  color: #fff;
+}
+
+.select:hover::after {
+  background: white;
+  color: #ff6747;
+}

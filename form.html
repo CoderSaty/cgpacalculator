@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form class="sem-sel">
+      <label for="semester">Choose Your Semester</label>
+      <div class="select">
+        <select
+          id="semester"
+          name="semester"
+          onchange="showsem(value);"
+          class="choose-semester"
+        >
+          <option value="1">First</option>
+          <option value="2">Second</option>
+          <option value="3">Third</option>
+          <option value="4">Fourth</option>
+          <option value="5">Fifth</option>
+          <option value="6">Sixth</option>
+          <option value="7">Seventh</option>
+          <option value="8">Eight</option>
+        </select>
+      </div>
+      <label for="branch">Choose Your Branch</label>
+      <div class="select">
+        <select
+          id="branch"
+          name="branch"
+          class="choose-branch"
+          onchange="showbranch(value);"
+        >
+          <option value="1">CSE</option>
+          <option value="2">EE</option>
+          <option value="3">ECE</option>
+          <option value="4">CHE</option>
+          <option value="5">CE</option>
+          <option value="6">IT</option>
+          <option value="7">ME</option>
+        </select>
+      </div>
+    </form>
+    <div class="panel">
+      <div class="subject">
+        <p class="sub-1"><span>hin</span> <input type="number" /></p>
+      </div>
+      <div class="subject">
+        <p class="sub-2"><span>hin</span> <input type="number" /></p>
+      </div>
+      <div class="subject">
+        <p class="sub-3"><span>hin</span> <input type="number" /></p>
+      </div>
+      <div class="subject">
+        <p class="sub-4"><span>hin</span> <input type="number" /></p>
+      </div>
+      <div class="subject">
+        <p class="sub-5"><span>hin</span> <input type="number" /></p>
+      </div>
+      <div class="subject">
+        <p class="sub-6"><span>hin</span> <input type="number" /></p>
+      </div>
+    </div>
+    <div class="calculate">
+      <button class="hit">Submit</button>
+    </div>
+    <div class="ans">
+      <p class="message"></p>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
