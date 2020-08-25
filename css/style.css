@@ -96,3 +96,6 @@ select {
   background: white;
   color: #ff6747;
 }
+.visibility {
+  display: none;
+}
