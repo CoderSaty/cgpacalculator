@@ -1,13 +1,18 @@
 var gbranch = "1";
 var gsem = "1";
 var calculate = document.querySelector(".hit");
-calculate.addEventListener("click", result);
+calculate.addEventListener("click", showresult);
+function showresult() {
+  result(gsem, gbranch);
+}
 function showbranch(e) {
+  document.querySelector(".message").innerText = "";
   gbranch = e;
   console.log(gsem, gbranch);
   showpanel(gsem, gbranch);
 }
 function showsem(e) {
+  document.querySelector(".message").innerText = "";
   gsem = e;
   console.log(gsem, gbranch);
   showpanel(gsem, gbranch);
@@ -1148,26 +1153,60 @@ function showpanel(sem, gbranch) {
   }
   console.log(a);
 }
-function result(e) {
-  var ans = [];
-  a = document.querySelector(".sub-1").children;
-  ans.push(parseInt(a[1].value));
-  a = document.querySelector(".sub-2").children;
-  ans.push(parseInt(a[1].value));
-  a = document.querySelector(".sub-3").children;
-  ans.push(parseInt(a[1].value));
-  a = document.querySelector(".sub-4").children;
-  ans.push(parseInt(a[1].value));
-  a = document.querySelector(".sub-5").children;
-  ans.push(parseInt(a[1].value));
-  a = document.querySelector(".sub-6").children;
-  ans.push(parseInt(a[1].value));
-  var x = 0;
-  for (i = 0; i < 6; i++) {
-    x += ans[i];
+function result(sem, branch) {
+  var totalcredit = 0;
+  var totalobtained = 0;
+  var f = 0;
+  if ((branch == "5" && sem == "6") || sem <= 4) {
+    var a;
+    for (i = 1; i <= 6; i++) {
+      a = document.querySelector(".sub-" + i).children;
+      if (!a[1].value == "") {
+        totalobtained += round(parseInt(a[1].value)) * a[2].textContent;
+        totalcredit += parseInt(a[2].textContent);
+      } else {
+        f++;
+      }
+    }
+    var ans = totalobtained / totalcredit;
+    if (f == 0) {
+      document.querySelector(".message").innerText =
+        "Your SGPA in Semester " + sem + " is " + ans;
+    } else {
+      alert("Please fill all the fields");
+    }
+  } else {
+    var a;
+    for (i = 1; i <= 5; i++) {
+      a = document.querySelector(".sub-" + i).children;
+      if (!a[1].value == "") {
+        totalobtained += round(parseInt(a[1].value)) * a[2].textContent;
+        totalcredit += parseInt(a[2].textContent);
+      } else {
+        f++;
+      }
+    }
+    var ans = totalobtained / totalcredit;
+    if (f == 0) {
+      document.querySelector(".message").innerText =
+        "Your SGPA in Semester " + sem + " is " + ans;
+    } else {
+      alert("Please fill all the fields");
+    }
   }
-  document.querySelector(".message").innerText = "the result is " + x;
-  console.log(ans);
+}
+function round(e) {
+  if (e == 0) return 0;
+  else if (e > 0 && e < 10) return 1;
+  else if (e >= 10 && e < 20) return 2;
+  else if (e >= 20 && e < 30) return 3;
+  else if (e >= 30 && e < 40) return 4;
+  else if (e >= 40 && e < 50) return 5;
+  else if (e >= 50 && e < 60) return 6;
+  else if (e >= 60 && e < 70) return 7;
+  else if (e >= 70 && e < 80) return 8;
+  else if (e >= 80 && e < 90) return 9;
+  else if (e >= 90 && e <= 100) return 10;
 }
 function addClass() {
   a = document.querySelector(".sub-6");
