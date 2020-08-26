@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form class="sem-sel">
+      <label for="semester">Upto Which Semester?</label>
+      <div class="select">
+        <select
+          id="semester"
+          name="semester"
+          onchange="showsem(value);"
+          class="choose-semester"
+        >
+          <option value="1">First</option>
+          <option value="2">Second</option>
+          <option value="3">Third</option>
+          <option value="4">Fourth</option>
+          <option value="5">Fifth</option>
+          <option value="6">Sixth</option>
+          <option value="7">Seventh</option>
+          <option value="8">Eight</option>
+        </select>
+      </div>
+      <label for="branch">Choose Your Branch</label>
+      <div class="select">
+        <select
+          id="branch"
+          name="branch"
+          class="choose-branch"
+          onchange="showbranch(value);"
+        >
+          <option value="1">CSE</option>
+          <option value="2">EE</option>
+          <option value="3">ECE</option>
+          <option value="4">CHE</option>
+          <option value="5">CE</option>
+          <option value="6">IT</option>
+          <option value="7">ME</option>
+        </select>
+      </div>
+    </form>
+    <div class="panel">
+      <div class="subject">
+        <p class="sub-1">
+          <span>Semester 1</span>
+          <input type="text" />
+          <span>24</span>
+        </p>
+      </div>
+      <div class="subject">
+        <p class="sub-2 visibility">
+          <span>Semester 2</span>
+          <input type="text" />
+          <span>25</span>
+        </p>
+      </div>
+      <div class="subject">
+        <p class="sub-3 visibility">
+          <span>Semester 3</span>
+          <input type="text" />
+          <span>21</span>
+        </p>
+      </div>
+      <div class="subject">
+        <p class="sub-4 visibility">
+          <span>Semester 4</span>
+          <input type="text" />
+          <span>23</span>
+        </p>
+      </div>
+      <div class="subject">
+        <p class="sub-5 visibility">
+          <span>Semester 5</span>
+          <input type="text" />
+          <span>5</span>
+        </p>
+      </div>
+      <div class="subject">
+        <p class="sub-6 visibility">
+          <span>Semester 6</span>
+          <input type="text" />
+          <span>21</span>
+        </p>
+      </div>
+      <div class="subject">
+        <p class="sub-7 visibility">
+          <span>Semester 7</span>
+          <input type="text" />
+          <span>21</span>
+        </p>
+      </div>
+      <div class="subject">
+        <p class="sub-8 visibility">
+          <span>Semester 8</span>
+          <input type="text" />
+          <span>21</span>
+        </p>
+      </div>
+    </div>
+    <div class="calculate">
+      <button class="hit">Submit</button>
+    </div>
+    <p>
+      Dont know your sgpa of this sem ?
+      <a href="form.html">Calculate it here </a>
+    </p>
+    <div class="ans">
+      <p class="message"></p>
+    </div>
+    <script src="js/appcgpa.js"></script>
+  </body>
+</html>

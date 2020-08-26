@@ -8,13 +8,11 @@ function showresult() {
 function showbranch(e) {
   document.querySelector(".message").innerText = "";
   gbranch = e;
-  console.log(gsem, gbranch);
   showpanel(gsem, gbranch);
 }
 function showsem(e) {
   document.querySelector(".message").innerText = "";
   gsem = e;
-  console.log(gsem, gbranch);
   showpanel(gsem, gbranch);
 }
 function showpanel(sem, gbranch) {
