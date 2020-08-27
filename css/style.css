@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body,
@@ -45,7 +47,7 @@ main .action {
   /* // height: 20vh;
   //width: 30vw; */
 }
-footer {
+/* footer {
   background-color: #000;
   margin-bottom: 0;
   position: relative;
@@ -53,7 +55,7 @@ footer {
   width: 100vw;
 
   text-align: center;
-}
+} */
 .visible {
   display: none;
   visibility: hidden;
@@ -98,4 +100,162 @@ select {
 }
 .visibility {
   display: none;
+}
+footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: #112;
+}
+footer .main-content {
+  display: flex;
+}
+footer .main-content .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.box .content {
+  margin: 20px 0 0 0;
+  position:relative;
+}
+.box .content:before{
+  position: absolute;
+  content: '';
+  top:-10px;
+  height:2px;
+  width:100%;
+  background:#112;
+}
+.box .content:after{
+  position: absolute;
+  content: '';
+  top:-10px;
+  height:2px;
+  width:15%;
+  background:#f12020;
+  top:-10px;
+}
+.left .content p {
+  text-align: justify;
+}
+.left .content .social-links {
+  margin: 20px 0 0 0;
+}
+.left .content .social-links a {
+  padding: 0 2px;
+}
+.left .content .social-links a i {
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: 1s;
+}
+.left .content .social-links a i:hover {
+  background: #f12020;
+}
+.center .content .fa {
+  font-size: 1.5rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 1s;
+  cursor: pointer;
+}
+.center .content .fa:hover {
+  background: #f12020;
+}
+.center .content .text {
+  font-size: 1rem;
+  font-weight: 500;
+  padding:left:10px;
+}
+.right form .message,.right form .text,.right form .email{
+  margin-top:10px;
+}
+.right form input, .right  form textarea{
+  font-size:1.2;
+  background: #1a1a1a;
+  padding-left:10px;
+  color:skyblue;
+  border:1px solid #222;
+ 
+}
+.right form input::placeholder, .right  form textarea::placeholder{
+  font-size:1.2;
+  color:#fff;
+}
+
+.right form input:focus,
+.right form textarea:focus
+{
+  outline:none;
+}
+.right form input,.right form textarea{
+  height:35px;
+  width:100%;
+}
+.right form textarea{
+  height:100px;
+}
+.right form .submit{
+margin-top:10px;
+}
+.right form .submit .submit-btn{
+  height:40px;
+  width:100%;
+  border:none;
+  text-align:center;
+  outline:none;
+  background:#f12020;
+  font-size:1.1;
+  color:#1a1a1a;
+  font-weight:500;
+  transition:.5s;
+}
+.right form .submit .submit-btn:hover{
+  background:#1a1a1a;
+  color:#f12020;
+}
+.bottom center{
+  padding:5px;
+  font-size:1rem;
+  background: #151515;
+}
+.bottom center span
+{
+  color:#656565;
+}
+
+.bottom center a
+{
+  color:#f12020;
+  text-decoration:none;
+
+}
+.bottom center a:hover{
+  text-decoration:none;
+}
+
+@media screen and (max-width:900px)
+{
+  .main-content{
+    flex-wrap:wrap;
+    flex-direction:column;
+  }
+  .main-content .box{
+    margin: 5px  0;
+  }
 }
