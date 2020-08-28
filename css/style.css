@@ -59,10 +59,10 @@ header .container, .heading-continer {
   right: 45px;
   font-size: 60px;
 }
-.logo
+nav .logo
 {
-  margin:2px;
-  margin-right:5px;
+  margin:24px;
+  width:80px;
 }
 .overlay {
   height: 100%;
