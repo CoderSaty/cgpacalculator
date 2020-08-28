@@ -23,7 +23,7 @@
   <body>
     <header>
     
-      <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+      <!-- <nav class="navbar navbar-expand-lg navbar-dark primary-color">
         <a class="navbar-brand" href="#"><img
           src="assests/img/mmmut-logo.png"
           alt="MMMUT LOGO"
@@ -52,8 +52,93 @@
             </li>
           </ul>
         </div>
-      </nav>
-    
+      </nav> -->
+          <!-- <nav>
+            <ul>
+              <li>
+                <a href="">
+                  <div class="icon">
+                  
+                  </div>
+                  <div class="name">Home</div>
+                </a>
+              </li>
+              <li>
+                <a href="cgpa.html">
+                  <div class="icon">
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                  </div>
+                  <div class="name">CGPA</div>
+                </a>
+              </li>
+              <li>
+                <a href="sgpa.html">
+                  <div class="icon">
+                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                  </div>
+                  <div class="name">SGPA</div>
+                </a>
+              </li>
+              <li>
+                <a href="faq.html">
+                  <div class="icon">
+                 
+                  </div>
+                  <div class="name">FAQ</div>
+                </a>
+              </li>
+              <li>
+                <a href="creator.html">
+                  <div class="icon">
+            
+                  </div>
+                  <div class="name">Creator</div>
+                </a>
+              </li>
+
+            </ul>
+          </nav> -->
+          <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn link" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a class="navbar-brand ml-2 link" href="#"><img
+                src="assests/img/mmmut-logo.png"
+                alt="MMMUT LOGO"
+                class="img-fluid hvr-grow "
+            /></a>
+              <!-- <i class="fa fa-home" aria-hidden="true"></i> -->
+              <a href="#" class="link">    <i class="fa fa-graduation-cap" aria-hidden="true"></i> CGPA</a>
+              <a href="#" class="link">  <i class="fa fa-calculator" aria-hidden="true"></i> SGPA</a>
+              <a href="#" class="link">   <i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a>
+              <a href="#" class="link">        <i class="fa fa-laptop"></i> Developer</a>
+              <div class="social-links">
+                <a href="https://www.facebook.com/mmmut.ac.in">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-globe"></i>
+                </a>
+                <a href="https://twitter.com/MMMUTgkp">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/school/madan-mohan-malaviya-university-of-technology/about/"
+                >
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/user/mmmut1">
+                  <i class="fa fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        <a class="navbar-brand" href="#"><img
+          src="assests/img/mmmut-logo.png"
+          alt="MMMUT LOGO"
+          class="img-fluid hvr-grow logo"
+      /></a>
+      <div class="hamburger">          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      </div>
           <div class="heading-continer">
             <h1 class="faq-heading">Frequently Asked Question</h1>
 
@@ -386,6 +471,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
       
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
 
 const items = document.querySelectorAll(".accordion-link");
 console.log(items);
