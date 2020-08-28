@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Font awesome cdn  -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -14,48 +18,60 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/creator.css" />
+    <title>MMMUT|SGPA Calculator</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
-      <a class="navbar-brand" href="#"
-        ><img
+    <header>
+    
+      
+        <nav>
+          <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn link" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a class="navbar-brand ml-2 link" href="index.html"><img
+                src="assests/img/mmmut-logo.png"
+                alt="MMMUT LOGO"
+                class="img-fluid hvr-grow "
+            /></a>
+              <!-- <i class="fa fa-home" aria-hidden="true"></i> -->
+              <a href="cgpa.html" class="link">    <i class="fa fa-graduation-cap" aria-hidden="true"></i> CGPA</a>
+              <a href="form.html" class="link">  <i class="fa fa-calculator" aria-hidden="true"></i> SGPA</a>
+              <a href="faq.html" class="link">   <i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a>
+              <a href="creator.html" class="link">        <i class="fa fa-laptop"></i> Developer</a>
+              <div class="social-links">
+                <a href="https://www.facebook.com/mmmut.ac.in">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-globe"></i>
+                </a>
+                <a href="https://twitter.com/MMMUTgkp">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/school/madan-mohan-malaviya-university-of-technology/about/"
+                >
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/user/mmmut1">
+                  <i class="fa fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        <a class="navbar-brand" href="index.html"><img
           src="assests/img/mmmut-logo.png"
           alt="MMMUT LOGO"
-          class="img-fluid hvr-grow"
+          class="img-fluid hvr-grow logo"
       /></a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cgpa.html">CGPA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sgpa.html">SGPA</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="faq.html">FAQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="creator.html">Developer</a>
-          </li>
-        </ul>
+      <div class="hamburger">          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
       </div>
     </nav>
+          
+      </div>
+    </header>
+   <main>
     <form class="sem-sel">
       <label for="semester">Choose Your Semester</label>
       <div class="select">
@@ -143,9 +159,122 @@
     <div class="ans">
       <p class="message"></p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- <script src="js/app.js"></script> -->
+  </main>
+  <footer>
+    <div class="row main-content">
+      <!-- <div class="main-content"> -->
+      <div class="col-md-4">
+        <div class="left box">
+          <h2>Disclaimer</h2>
+          <div class="content">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+              blanditiis non, harum qui magnam explicabo! Unde consequuntur
+              iusto, dolor nulla architecto ratione expedita impedit tempora,
+              iure molestiae beatae, deserunt dolorum!
+            </p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/mmmut.ac.in">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-globe"></i>
+              </a>
+              <a href="https://twitter.com/MMMUTgkp">
+                <i class="fa fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/school/madan-mohan-malaviya-university-of-technology/about/"
+              >
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="https://www.youtube.com/user/mmmut1">
+                <i class="fa fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="center box">
+          <h2>Address</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fa fa-map"></span>
+              <span class="text"
+                >Madan Mohan Malaviya University Of Technology Deoria Road,
+                Singhariya, Kunraghat, Gorakhpur, Uttar Pradesh,India,
+                273016</span
+              >
+            </div>
+            <div class="phone">
+              <span class="fa fa-phone"></span>
+              <span class="text">+91-551-2273958, +91-8765783730</span>
+            </div>
+            <div class="email">
+              <span class="fa fa-envelope"></span>
+              <span class="text">patovc@mmmut.ac.in</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="right box">
+          <h2>Feedback</h2>
+          <div class="content">
+            <form action="#">
+              <div class="name">
+                <input type="text" placeholder="Your Name" />
+              </div>
+              <div class="email">
+                <input type="email" placeholder=" Your Email" required />
+              </div>
+              <div class="message">
+                <textarea
+                  name=""
+                  id=""
+                  cols="25"
+                  rows="6"
+                  placeholder=" Your Valuable Message"
+                  required
+                ></textarea>
+              </div>
+              <div class="submit">
+                <input type="submit" value="Send" class="submit-btn" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+    <div class="bottom">
+      <center>
+        <span class="credit">Created by <a href="">Codersaty</a></span> |
+        <span class="fa fa-copyright"></span
+        ><span> 2020 All right Reserved.</span>
+      </center>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    
+function openNav() {
+document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+document.getElementById("myNav").style.width = "0%";
+}
+
+  </script>
+
+    <script src="js/app.js"></script>
   </body>
 </html>

@@ -7,6 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <!-- for whatsapp link -->
+    <link rel="stylesheet" href="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.css">
     <!-- Font awesome cdn  -->
     <link
       rel="stylesheet"
@@ -17,8 +19,10 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+ 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/creator.css" />
+       
     <title>MMMUT|SGPA Calculator</title>
   </head>
   <body>
@@ -72,113 +76,133 @@
       </div>
     </header>
    <main>
-    <form class="sem-sel">
-      <label for="semester">Upto Which Semester?</label>
-      <div class="select">
-        <select
-          id="semester"
-          name="semester"
-          onchange="showsem(value);"
-          class="choose-semester"
-        >
-          <option value="1">First</option>
-          <option value="2">Second</option>
-          <option value="3">Third</option>
-          <option value="4">Fourth</option>
-          <option value="5">Fifth</option>
-          <option value="6">Sixth</option>
-          <option value="7">Seventh</option>
-          <option value="8">Eight</option>
-        </select>
-      </div>
-      <label for="branch">Choose Your Branch</label>
-      <div class="select">
-        <select
-          id="branch"
-          name="branch"
-          class="choose-branch"
-          onchange="showbranch(value);"
-        >
-          <option value="1">CSE</option>
-          <option value="2">EE</option>
-          <option value="3">ECE</option>
-          <option value="4">CHE</option>
-          <option value="5">CE</option>
-          <option value="6">IT</option>
-          <option value="7">ME</option>
-        </select>
-      </div>
-    </form>
-    <div class="panel">
-      <div class="subject">
-        <p class="sub-1">
-          <span>Semester 1</span>
-          <input type="text" />
-          <span>24</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-2 visibility">
-          <span>Semester 2</span>
-          <input type="text" />
-          <span>25</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-3 visibility">
-          <span>Semester 3</span>
-          <input type="text" />
-          <span>21</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-4 visibility">
-          <span>Semester 4</span>
-          <input type="text" />
-          <span>23</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-5 visibility">
-          <span>Semester 5</span>
-          <input type="text" />
-          <span>5</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-6 visibility">
-          <span>Semester 6</span>
-          <input type="text" />
-          <span>21</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-7 visibility">
-          <span>Semester 7</span>
-          <input type="text" />
-          <span>21</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-8 visibility">
-          <span>Semester 8</span>
-          <input type="text" />
-          <span>21</span>
-        </p>
+    
+    <div class="profile">
+      <div class="profile-card">
+        <div class="header">
+          <div class="profile-phone"><a href=" tel:8429364914"><i class="fa fa-phone"></i></a></div>
+          <div class="profile-email"><a href="mailto:codersaty@gmail.com"><i class="fa fa-envelope"></i></a></div>
+          <div class="main">
+            <div class="image">
+              <div class="hover">
+               
+              </div>
+            </div>
+            <h3 class="name">Anuranjan Srivastava</h3>
+            <div class="sub-name"><a href="#">@codersaty</a></div>
+          </div>
+        </div>
+        <div class="profile-content">
+         <div class="profile-about">
+           <h3 class="title">About</h3>
+           <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quibusdam reiciendis eveniet quisquam quam impedit dolor veniam. Nemo numquam aut reprehenderit possimus, voluptatem commodi beatae ab voluptates consequatur nulla odit?</p>
+         </div>
+         <div class="profile-icons">
+           <a href="https://www.linkedin.com/in/codersaty" class="profile-icon"><i class="fa fa-linkedin"></i></a>
+           <a href="https://www.github.com/codersaty" class="profile-icon"><i class="fa fa-github"></i></a>
+           <a href="https://www.facebook.com/codersaty" class="profile-icon"><i class="fa fa-facebook"></i></a>
+           <a href="https://www.instagram.com/codersaty" class="profile-icon"><i class="fa fa-instagram"></i></a>
+           <a href="https://www.twitter.com/codersaty" class="profile-icon"><i class="fa fa-twitter"></i></a>
+           <!-- <a href="https://www.linkedin.com/in/codersaty" class="profile-icon"><i class="fa fa-facebook"></i></a> -->
+         </div>
+         <div class="profile-button">
+           <div class="resume-button">
+             <a href="assests/documents/codersatyResume_.pdf" class="resume" target="_blank">RESUME</a>
+           </div>
+           <div class="portfolio-button">
+            <a href="#" class="portfolio" target="_blank">PORTFOLIO</a>
+          </div>
+         </div>
+        </div>
       </div>
     </div>
-    <div class="calculate">
-      <button class="hit">Submit</button>
-    </div>
-    <p>
-      Dont know your sgpa of this sem ?
-      <a href="form.html">Calculate it here </a>
-    </p>
-    <div class="ans">
-      <p class="message"></p>
-    </div>
-
-</main>
+    <!-- <div class="profile">
+        <div class="ds-top"></div>
+        <div class="avatar-holder">
+          <img src="assests/img/profile.jpg" alt="Albert Einstein">
+        </div>
+        <div class="name">
+          <a href="https://www.linkedin.com/in/codersaty" target="_blank">Anuranjan Srivastava(Codersaty)</a>
+          <p>Junior Year, CSE , B.Tech ,MMMUT Gorakhpur Uttar Pradesh </p>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/mmmut.ac.in">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-globe"></i>
+            </a>
+            <a href="https://twitter.com/MMMUTgkp">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/school/madan-mohan-malaviya-university-of-technology/about/"
+            >
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/user/mmmut1">
+              <i class="fa fa-youtube"></i>
+            </a>
+          </div>
+        <div class="ds-skill">
+          <h6>Skill <i class="fa fa-code" aria-hidden="true"></i></h6>
+          <div class="skill html">
+            <h6><i class="fab fa-html5"></i> HTML5 </h6>
+            <div class="bar bar-html">
+              <p>95%</p>
+            </div>
+          </div>
+          <div class="skill css">
+            <h6><i class="fab fa-css3-alt"></i> CSS3 </h6>
+            <div class="bar bar-css">
+              <p>90%</p>
+            </div>
+          </div>
+          <div class="skill javascript">
+            <h6><i class="fab fa-js"></i> JavaScript </h6>
+            <div class="bar bar-js">
+              <p>75%</p>
+            </div>
+          </div>
+          <div class="skill javascript">
+            <h6><i class="fab fa-js"></i> JavaScript </h6>
+            <div class="bar bar-js">
+              <p>75%</p>
+            </div>
+          </div>
+          <div class="skill javascript">
+            <h6><i class="fab fa-js"></i> JavaScript </h6>
+            <div class="bar bar-js">
+              <p>75%</p>
+            </div>
+          </div>
+          <div class="skill javascript">
+            <h6><i class="fab fa-js"></i> JavaScript </h6>
+            <div class="bar bar-js">
+              <p>75%</p>
+            </div>
+          </div>
+          <div class="skill javascript">
+            <h6><i class="fab fa-js"></i> JavaScript </h6>
+            <div class="bar bar-js">
+              <p>75%</p>
+            </div>
+          </div>
+          <div class="skill javascript">
+            <h6><i class="fab fa-js"></i> JavaScript </h6>
+            <div class="bar bar-js">
+              <p>75%</p>
+            </div>
+          </div>
+          <div class="skill javascript">
+            <h6><i class="fab fa-js"></i> JavaScript </h6>
+            <div class="bar bar-js">
+              <p>75%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+   </main> -->
     <footer>
       <div class="row main-content">
         <!-- <div class="main-content"> -->
@@ -276,14 +300,16 @@
         </center>
       </div>
     </footer>
-
+    <div id="WAButton"></div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      
+    
+     <!-- for whatsapp -->
+      <script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
+      <script>  
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
 }
@@ -296,8 +322,21 @@ function closeNav() {
 
 
     </script>
-    <script src="js/appcgpa.js"></script>
+    <script>
+     
+      $(function() {
+  $('#WAButton').floatingWhatsApp({
+    phone: '8429364914', //WhatsApp Business phone number International format-
+    //Get it with Toky at https://toky.co/en/features/whatsapp.
+    headerTitle: 'Chat with me on WhatsApp!', //Popup Title
+    popupMessage: 'HI 🙏', //Popup Message
+    showPopup: true, //Enables popup display
+    buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
+    headerColor: 'crimson', //Custom header color
+    backgroundColor: 'crimson', //Custom background button color
+    position: "right"    
+  });
+});
+    </script>
   </body>
 </html>
-
-    
