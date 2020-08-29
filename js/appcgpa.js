@@ -13,7 +13,7 @@ var gsem = "1";
 var calculate = document.querySelector(".hit");
 calculate.addEventListener("click", showresult);
 function showresult() {
-  result(gsem, gbranch);
+  check(gsem, gbranch);
 }
 function showbranch(e) {
   document.querySelector(".message").innerText = "";
@@ -30,66 +30,74 @@ function showpanel(sem, branch) {
     case "1":
       for (var i = 1; i <= 8; i++) {
         var b = document.querySelector(".sub-" + i);
+        var cr = document.querySelector(".sub-" + i + "-cr");
         if (i <= 1) removeClass(b);
         else addClass(b);
-        b.children[2].innerText = creditsdata[branch - 1][i - 1];
+        cr.innerText = creditsdata[branch - 1][i - 1];
       }
       break;
     case "2":
       for (var i = 1; i <= 8; i++) {
         var b = document.querySelector(".sub-" + i);
+        var cr = document.querySelector(".sub-" + i + "-cr");
         if (i <= 2) removeClass(b);
         else addClass(b);
-        b.children[2].innerText = creditsdata[branch - 1][i - 1];
+        cr.innerText = creditsdata[branch - 1][i - 1];
       }
       break;
 
     case "3":
       for (var i = 1; i <= 8; i++) {
         var b = document.querySelector(".sub-" + i);
+        var cr = document.querySelector(".sub-" + i + "-cr");
         if (i <= 3) removeClass(b);
         else addClass(b);
-        b.children[2].innerText = creditsdata[branch - 1][i - 1];
+        cr.innerText = creditsdata[branch - 1][i - 1];
       }
       break;
     case "4":
       for (var i = 1; i <= 8; i++) {
         var b = document.querySelector(".sub-" + i);
+        var cr = document.querySelector(".sub-" + i + "-cr");
         if (i <= 4) removeClass(b);
         else addClass(b);
-        b.children[2].innerText = creditsdata[branch - 1][i - 1];
+        cr.innerText = creditsdata[branch - 1][i - 1];
       }
       break;
     case "5":
       for (var i = 1; i <= 8; i++) {
         var b = document.querySelector(".sub-" + i);
+        var cr = document.querySelector(".sub-" + i + "-cr");
         if (i <= 5) removeClass(b);
         else addClass(b);
-        b.children[2].innerText = creditsdata[branch - 1][i - 1];
+        cr.innerText = creditsdata[branch - 1][i - 1];
       }
       break;
     case "6":
       for (var i = 1; i <= 8; i++) {
         var b = document.querySelector(".sub-" + i);
+        var cr = document.querySelector(".sub-" + i + "-cr");
         if (i <= 6) removeClass(b);
         else addClass(b);
-        b.children[2].innerText = creditsdata[branch - 1][i - 1];
+        cr.innerText = creditsdata[branch - 1][i - 1];
       }
       break;
     case "7":
       for (var i = 1; i <= 8; i++) {
         var b = document.querySelector(".sub-" + i);
+        var cr = document.querySelector(".sub-" + i + "-cr");
         if (i <= 7) removeClass(b);
         else addClass(b);
-        b.children[2].innerText = creditsdata[branch - 1][i - 1];
+        cr.innerText = creditsdata[branch - 1][i - 1];
       }
       break;
     case "8":
       for (var i = 1; i <= 8; i++) {
         var b = document.querySelector(".sub-" + i);
+        var cr = document.querySelector(".sub-" + i + "-cr");
         if (i <= 8) removeClass(b);
         else addClass(b);
-        b.children[2].innerText = creditsdata[branch - 1][i - 1];
+        cr.innerText = creditsdata[branch - 1][i - 1];
       }
   }
 }
@@ -102,25 +110,111 @@ function removeClass(b) {
   if (b.classList.contains("visibility"));
   b.classList.remove("visibility");
 }
-function result(sem, branch) {
-  var totalcredit = 0;
-  var totalobtained = 0;
-  var f = 0,
-    a;
-  for (var i = 1; i <= sem; i++) {
+
+function check(sem, branch) {
+  //var totalcredit = 0;
+  //var totalobtained = 0;
+  var f = 0;
+  var sgpa = 0,
+    i;
+  for (i = 1; i <= sem; i++) {
     a = document.querySelector(".sub-" + i).children;
-    if (!a[1].value == "") {
-      totalobtained += parseFloat(a[1].value) * creditsdata[branch - 1][i - 1];
-      totalcredit += creditsdata[branch - 1][i - 1];
+    sgpa = a[1].children;
+    if (!sgpa[0].value == "") {
+      if (sgpa[0].value < 0) {
+        alert("The SGPA cannot be less than 0");
+        break;
+      }
+      if (sgpa[0].value > 10) {
+        alert("The SGPA canot be greater than 10");
+        break;
+      }
+      if (isNaN(parseFloat(sgpa[0].value))) {
+        alert("The SGPA canot be a string");
+        break;
+      }
     } else {
       f++;
     }
   }
-  var ans = totalobtained / totalcredit;
-  if (f == 0) {
-    document.querySelector(".message").innerText =
-      "Your CGPA upto Semester " + sem + " is " + ans;
-  } else {
-    alert("Please fill all the fields");
+
+  if (i > sem) {
+    result(sem, branch, f);
   }
+}
+function result(sem, branch, f) {
+  var totalcredit = 0;
+  var totalobtained = 0;
+  for (var i = 1; i <= sem; i++) {
+    a = document.querySelector(".sub-" + i).children;
+    sgpa = a[1].children;
+    totalobtained += parseFloat(sgpa[0].value) * creditsdata[branch - 1][i - 1];
+    totalcredit += creditsdata[branch - 1][i - 1];
+    var ans = totalobtained / totalcredit;
+    if (f == 0) {
+      document.querySelector(".message").innerText = customMessage(ans, sem);
+      var message = document.querySelector(".message").parentElement;
+      message.classList.remove("visible");
+    } else {
+      alert("Please fill all the fields");
+    }
+  }
+}
+function customMessage(cgpa, sem) {
+  if (cgpa > 9 && cgpa <= 10)
+    return (
+      "Outstanding 🏆 ! Your CGPA upto Semester " +
+      sem +
+      " is " +
+      cgpa +
+      " and your grade is A(+)."
+    );
+  else if (cgpa > 8 && cgpa <= 9)
+    return (
+      "Excellent 🔥 ! Your CGPA upto Semester " +
+      sem +
+      " is " +
+      cgpa +
+      " and your grade is A."
+    );
+  else if (cgpa > 7 && cgpa <= 8)
+    return (
+      "Very Good ⭐! Your CGPA upto Semester " +
+      sem +
+      " is " +
+      cgpa +
+      " and your grade is B(+)."
+    );
+  else if (cgpa > 6 && cgpa <= 7)
+    return (
+      "Good 😀! Your CGPA upto Semester " +
+      sem +
+      " is " +
+      cgpa +
+      " and your grade is B."
+    );
+  else if (cgpa > 5 && cgpa <= 6)
+    return (
+      "Average 🙂! Your CGPA upto Semester " +
+      sem +
+      " is " +
+      cgpa +
+      " and your grade is C."
+    );
+  else if (cgpa > 4 && cgpa <= 5)
+    return (
+      "Below Average 😐! Your CGPA upto Semester " +
+      sem +
+      " is " +
+      cgpa +
+      " and your grade is D."
+    );
+  else
+    return (
+      "No comments 😟! Your CGPA upto Semester " +
+      sem +
+      " is " +
+      cgpa +
+      " and your grade is F."
+    );
 }

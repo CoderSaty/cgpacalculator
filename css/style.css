@@ -162,14 +162,7 @@ nav .logo
   font-size:2rem;
 }
 /* for cards on the main page end */
-/* for js displainy and hiding */
-.visible {
-  display: none;
-}
-.visibility{
-  opacity: 0;
-}
-/* for js displaying end */
+
 /* for styling select on cgpa and sgpa page */
 select {
   -webkit-appearance: none;
@@ -657,3 +650,11 @@ margin-top:10px;
   margin-bottom:13px;
 }
 /* share dialog fall back css  end*/
+/* for js displainy and hiding */
+.visible {
+  opacity:0;
+}
+.visibility{
+display:none;
+}
+/* for js displaying end */
