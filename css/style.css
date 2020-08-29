@@ -570,12 +570,19 @@ margin-top:10px;
   }
   @media screen and (max-width:400px)
   {
+    table{
+      width:100%;
+      margin:0;
+    }
     .cgpa-form input,.sgpa-form input{
       width:100px;
       border:none;
     }
     .cgpa-form input::placeholder,.sgpa-form input::placeholder{
       opacity:0;
+    }
+    thead{
+      display:none;
     }
   }
   .cgpa-form input:focus,.sgpa-form input:focus{
