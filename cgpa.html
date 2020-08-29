@@ -23,8 +23,7 @@
   </head>
   <body>
     <header>
-    
-      
+     
         <nav>
           <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn link" onclick="closeNav()">&times;</a>
@@ -72,26 +71,32 @@
       </div>
     </header>
    <main>
-    <form class="sem-sel">
-      <label for="semester">Upto Which Semester?</label>
-      <div class="select">
-        <select
-          id="semester"
-          name="semester"
-          onchange="showsem(value);"
-          class="choose-semester"
-        >
-          <option value="1">First</option>
-          <option value="2">Second</option>
-          <option value="3">Third</option>
-          <option value="4">Fourth</option>
-          <option value="5">Fifth</option>
-          <option value="6">Sixth</option>
-          <option value="7">Seventh</option>
-          <option value="8">Eight</option>
-        </select>
-      </div>
-      <label for="branch">Choose Your Branch</label>
+    <!-- <form class="sem-sel"> -->
+      <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <label for="semester">Upto Which Semester?</label>
+          <div class="select">
+            <select
+              id="semester"
+              name="semester"
+              onchange="showsem(value);"
+              class="choose-semester"
+            >
+              <option value="1">First</option>
+              <option value="2">Second</option>
+              <option value="3">Third</option>
+              <option value="4">Fourth</option>
+              <option value="5">Fifth</option>
+              <option value="6">Sixth</option>
+              <option value="7">Seventh</option>
+              <option value="8">Eight</option>
+            </select>
+          </div>
+    
+        </div>
+        <div class="col-md-6">
+          <label for="branch">Choose Your Branch</label>
       <div class="select">
         <select
           id="branch"
@@ -108,76 +113,111 @@
           <option value="7">ME</option>
         </select>
       </div>
-    </form>
-    <div class="panel">
-      <div class="subject">
-        <p class="sub-1">
-          <span>Semester 1</span>
-          <input type="text" />
-          <span>24</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-2 visibility">
-          <span>Semester 2</span>
-          <input type="text" />
-          <span>25</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-3 visibility">
-          <span>Semester 3</span>
-          <input type="text" />
-          <span>21</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-4 visibility">
-          <span>Semester 4</span>
-          <input type="text" />
-          <span>23</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-5 visibility">
-          <span>Semester 5</span>
-          <input type="text" />
-          <span>5</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-6 visibility">
-          <span>Semester 6</span>
-          <input type="text" />
-          <span>21</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-7 visibility">
-          <span>Semester 7</span>
-          <input type="text" />
-          <span>21</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-8 visibility">
-          <span>Semester 8</span>
-          <input type="text" />
-          <span>21</span>
-        </p>
+      
+        </div>
       </div>
     </div>
-    <div class="calculate">
-      <button class="hit">Submit</button>
+    <!-- </form> -->
+   
+    <div class="container cgpa-form">
+      <div class="panel">
+        <table class="table  table-hover table-striped table-dark">
+          <thead>
+            <tr>
+              <th scope="col">SEMESTERS</th>
+              <th scope="col">SGPA</th>
+              <th scope="col">TOTAL CREDITS</th>
+            </tr>
+          </thead>
+          <tr>
+        <div class="subject">
+          <p class="sub-1">
+            <th><span>Semester 1</span></th>
+            <th><input type="text" placeholder="Enter your SGPA" /></th>        
+            <th><span>24</span></th>    
+          </p>
+        </div>
+      </tr>
+      <tr>
+        <div class="subject">
+          <p class="sub-2 visibility">
+           <th><span>Semester 2</span></th> 
+           <th><input type="text" placeholder="Enter your SGPA" /></th>  
+          <th><span>25</span></th>  
+          </p>
+        </div>
+      </tr>
+        <tr>
+          <div class="subject">
+            <p class="sub-3 visibility">
+          <th><span>Semester 3</span></th>   
+          <th><input type="text" placeholder="Enter your SGPA" /></th>  
+            <th><span>21</span></th>  
+            </p>
+          </div>
+   
+        </tr>
+        <tr>        <div class="subject">
+          <p class="sub-4 visibility">
+          <th><span>Semester 4</span></th>       
+         <th><input type="text" placeholder="Enter your SGPA" /></th>   
+          <th><span>23</span></th>  
+          </p>
+        </div>
+        </tr>
+        <tr>
+          <div class="subject">
+            <p class="sub-5 visibility">
+            <th><span>Semester 5</span></th>  
+            <th><input type="text" placeholder="Enter your SGPA" /></th>   
+            <th><span>5</span></th>  
+            </p>
+          </div>
+        </tr>
+        <tr>
+          <div class="subject">
+            <p class="sub-6 visibility">
+            <th><span>Semester 6</span></th>  
+            <th><input type="text" placeholder="Enter your SGPA" /></th>   
+            <th><span>21</span></th>  
+            </p>
+          </div>
+        </tr>
+        <tr>
+          <div class="subject">
+            <p class="sub-7 visibility">
+              <th><span>Semester 7</span></th>
+              <th><input type="text" placeholder="Enter your SGPA" /></th> 
+              <th><span>21</span></th>
+            </p>
+          </div>
+        </tr>
+        <tr>
+          <div class="subject">
+            <p class="sub-8 visibility">
+              <th><span>Semester 8</span></th>
+              <th><input type="text" placeholder="Enter your SGPA" /></th> 
+              <th><span>21</span></th>
+            </p>
+          </div>
+        </tr>
+        
+      </div>
+    </table>
+      <div class="calculate">
+        <button class="hit sns-btn">CALCULATE &nbsp;<i class="fa fa-calculator" aria-hidden="true"></i></button>
+        <p>
+          Dont know your sgpa of this sem ?
+          <a href="form.html">Calculate it here </a>
+        </p>
+        <div class="ans">
+          <p class="message">Congratulations Man! your CGPA is 9 and your elgible to apply for an interview.</p>
+        </div>
+      </div>
+     
+  
     </div>
-    <p>
-      Dont know your sgpa of this sem ?
-      <a href="form.html">Calculate it here </a>
-    </p>
-    <div class="ans">
-      <p class="message"></p>
-    </div>
-
+  
 </main>
     <footer>
       <div class="row main-content">

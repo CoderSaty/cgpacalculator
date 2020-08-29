@@ -72,7 +72,10 @@
       </div>
     </header>
    <main>
-    <form class="sem-sel">
+     <div class="container">
+    <!-- <form class="sem-sel"></form> -->
+    <div class="row">
+      <div class="col-md-6">
       <label for="semester">Choose Your Semester</label>
       <div class="select">
         <select
@@ -91,6 +94,8 @@
           <option value="8">Eight</option>
         </select>
       </div>
+    </div>
+    <div class="col-md-6">
       <label for="branch">Choose Your Branch</label>
       <div class="select">
         <select
@@ -108,57 +113,89 @@
           <option value="7">ME</option>
         </select>
       </div>
-    </form>
+    </div>
+    <!-- </form> -->
+  </div>
+  </div>
+  <div class="container sgpa-form">
     <div class="panel">
-      <div class="subject">
-        <p class="sub-1">
-          <span>Engineering Mathematics-I (BAS-01)</span>
-          <input type="number" required />
-          <span>4</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-2">
-          <span>Engineering Physics-I (BAS-02)</span>
-          <input type="number" required />
-          <span>5</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-3">
-          <span>Introduction to C & Functional Programming (BCS-02)</span>
-          <input type="number" required />
-          <span>5</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-4">
-          <span>Principles of Electrical Engineering (BEE-01)</span>
-          <input type="number" required />
-          <span>5</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-5">
-          <span>Professional Communication (BAS-03)</span>
-          <input type="number" required />
-          <span>4</span>
-        </p>
-      </div>
-      <div class="subject">
-        <p class="sub-6">
-          <span>Software Lab-I (BCS-03)</span>
-          <input type="number" required />
-          <span>2</span>
-        </p>
-      </div>
+      <table class="table  table-hover table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col">SUBJECT ( CODE )</th>
+            <th scope="col">MARKS ( MM:- 100 )</th>
+            <th scope="col">CREDITS</th>
+          </tr>
+        </thead>
+        <tr>
+          <div class="subject">
+            <p class="sub-1">
+            <th><span>Engineering Mathematics-I (BAS-01)</span></th>  
+            <th><input type="number" placeholder="Enter your marks" required /></th>  
+            <th><span>4</span></th>  
+            </p>
+          </div>
+        </tr>
+      <tr>
+        <div class="subject">
+          <p class="sub-2">
+          <th><span>Engineering Physics-I (BAS-02)</span></th>  
+          <th><input type="number" placeholder="Enter your marks" required /></th>  
+          <th><span>5</span></th>  
+          </p>
+        </div>
+      </tr>
+      <tr>
+        <div class="subject">
+          <p class="sub-3">
+            <th><span>Introduction to C & Functional Programming (BCS-02)</span></th>
+            <th><input type="number" placeholder="Enter your marks"  required /></th>
+            <th><span>5</span></th>
+          </p>
+        </div>
+      </tr>
+      <tr>
+        <div class="subject">
+          <p class="sub-4">
+           <th><span>Principles of Electrical Engineering (BEE-01)</span></th> 
+           <th><input type="number"  placeholder="Enter your marks" required /></th> 
+           <th><span>5</span></th> 
+          </p>
+        </div>
+      </tr>
+      <tr>
+        <div class="subject">
+          <p class="sub-5">
+           <th><span>Professional Communication (BAS-03)</span></th> 
+          <th><input type="number" placeholder="Enter your marks" required /></th>  
+          <th><span>4</span></th>  
+          </p>
+        </div>
+      </tr>
+      <tr>
+        <div class="subject">
+          <p class="sub-6">
+            <th><span>Software Lab-I (BCS-03)</span></th>
+           <th><input type="number" placeholder="Enter your marks" required /></th> 
+           <th><span>2</span></th> 
+          </p>
+        </div>
+      </tr>
+      
     </div>
+  </table>
     <div class="calculate">
-      <button class="hit">Submit</button>
+      <button class="hit sns-btn">CALCUALTE&nbsp;<i class="fa fa-calculator" aria-hidden="true"></i></button>
+      <p>
+        Want to calcualte your CGPA?
+        <a href="cgpa.html">Calculate it here. </a>
+      </p>
+      <div class="ans">
+        <p class="message">Congratulations Man! your CGPA is 9 and your elgible to apply for an interview.</p>
+      </div>
     </div>
-    <div class="ans">
-      <p class="message"></p>
-    </div>
+   
+  </div>
   </main>
   <footer>
     <div class="row main-content">
