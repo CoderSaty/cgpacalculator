@@ -222,13 +222,6 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <!-- for preloader -->
-   
-<!-- <script>
-  setTimeout(function(){
-    $('.preloader').fadeToggle();
-  },1500);
-</script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/jquery.js"></script>
@@ -243,37 +236,7 @@
       hidePreloader();
       });
       </script>
-      <!-- code for share button -->
-      <script>
-        const sharebutton=document.querySelector('.share-button');
-        const shareoverlay=document.querySelector('.share-overlay');
-        const sharenosupprt=document.querySelector('.share-nosupport');
-        const title=window.document.title;
-        const url=window.document.location.href;
-        sharebutton.addEventListener('click',()=>{
-          if(navigator.share){
-              navigator.share({
-                title: `${title}`,
-                url: `${url}`
-              }).then(()=>{
-                console.log('Thanks for sharing');
-              })
-              .catch(console.error);
-
-          }
-          else{
-              shareoverlay.classList.add('show-share');
-              sharenosupport.classList.add('show-share');
-
-          }
-        });
-        shareoverlay.addEventListener('click',()=>{
-          shareoverlay.classList.remove('show-share');
-              sharenosupport.classList.remove('show-share');
-
-
-        });
-      </script>
+      
       <!-- div for share  -->
       <div class="share">
         <!-- for dialog on fallback -->
@@ -282,9 +245,9 @@
             <h3 class="dialog-title">Share this website.</h3>
             <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
           </header>
-          <div class="row">
+          <div class="row target">
             
-        <div class="col-sm-4">
+        <div class="col-sm-4 targeting">
           <!-- facebook start -->
           <div id="fb-root"></div>
             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="dk63r2oJ"></script>
@@ -292,13 +255,13 @@
             <!-- facebook end -->
             
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 targeting">
               <!-- Linkedin start -->
            <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
            <script type="IN/Share" data-url="https://codersaty.github.io/cgpacalculator/"></script>
            <!-- linkeidn end --> 
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 targeting">
              <!-- twitter start -->
              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Hi! I just found this awesome website " data-url="https://codersaty.github.io/cgpacalculator/" data-via="codersaty" data-hashtags="#webdevelopment #coding" data-show-count="false">Tweet</a>
              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -316,34 +279,7 @@
           <i class="fa fa-share-alt" aria-hidden="true"></i>
          </button>
       </div>
-      <!-- div for share end -->
-      <!-- js for share button -->
-      <script>
-       const shareButton = document.querySelector('.share-button');
-        const shareDialog = document.querySelector('.share-dialog');
-        const closeButton = document.querySelector('.close-button');
-        
-
-      closeButton.addEventListener('click', event => {
-         shareDialog.classList.remove('is-open');
-      });
-
-        shareButton.addEventListener('click', event => {
-          if (navigator.share) {
-    navigator.share({
-      title: 'MMMUT CGPA|SGPA CALCULATOR',
-      url: 'https://codersaty.github.io/cgpacalculator/'
-    }).then(() => {
-      console.log('Thanks for sharing!');
-    })
-    .catch(console.error);
-  } else {
-   shareDialog.classList.add('is-open');
- 
-  }
-});
-      </script>
-      
+      <script src="js/script.js"></script>
       <!-- js for share button -->
   </body>
 </html>

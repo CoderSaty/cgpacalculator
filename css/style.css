@@ -635,11 +635,9 @@ margin-top:10px;
 .show-share{
   display:block;
 } */
-.share{
 
-}
 .share .share-button{
-  position:absolute;
+  position:fixed;
   bottom:1rem;
   left:1rem;
   z-index:1;
@@ -712,8 +710,12 @@ margin-top:10px;
   z-index: 2;
 }
 
-header {
+.share-dialog header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 } 
+.targeting
+{
+  margin-bottom:13px;
+}
