@@ -17,13 +17,16 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <!-- csutom styling css -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/creator.css" />
-    <title>MMMUT|SGPA Calculator</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assests/img/mmmut-logo.png" type="image/x-icon">
+    <!-- title -->
+    <title>MMMUT|CGPA Calculator</title>
   </head>
   <body>
     <header>
-     
+      <!-- Navbar html -->
         <nav>
           <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn link" onclick="closeNav()">&times;</a>
@@ -33,11 +36,10 @@
                 alt="MMMUT LOGO"
                 class="img-fluid hvr-grow "
             /></a>
-              <!-- <i class="fa fa-home" aria-hidden="true"></i> -->
-              <a href="cgpa.html" class="link">    <i class="fa fa-graduation-cap" aria-hidden="true"></i> CGPA</a>
-              <a href="form.html" class="link">  <i class="fa fa-calculator" aria-hidden="true"></i> SGPA</a>
-              <a href="faq.html" class="link">   <i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a>
-              <a href="creator.html" class="link">        <i class="fa fa-laptop"></i> Developer</a>
+              <a href="cgpa.html" class="link"><i class="fa fa-graduation-cap" aria-hidden="true"></i> CGPA</a>
+              <a href="form.html" class="link"><i class="fa fa-calculator" aria-hidden="true"></i> SGPA</a>
+              <a href="faq.html" class="link"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a>
+              <a href="creator.html" class="link"><i class="fa fa-laptop"></i> Developer</a>
               <div class="social-links">
                 <a href="https://www.facebook.com/mmmut.ac.in">
                   <i class="fa fa-facebook"></i>
@@ -64,14 +66,17 @@
           alt="MMMUT LOGO"
           class="img-fluid hvr-grow logo"
       /></a>
-      <div class="hamburger">          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      <div class="hamburger"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
       </div>
     </nav>
-          
+      <!-- navbar end -->
+      <div class="heading-continer">
+        <h1 class="faq-heading">Calculate Your CGPA.</h1>
       </div>
+
     </header>
    <main>
-    <!-- <form class="sem-sel"> -->
+     <!-- cgpa select branch and semester -->
       <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -93,32 +98,30 @@
               <option value="8">Eight</option>
             </select>
           </div>
-    
         </div>
         <div class="col-md-6">
           <label for="branch">Choose Your Branch</label>
-      <div class="select">
-        <select
-          id="branch"
-          name="branch"
-          class="choose-branch"
-          onchange="showbranch(value);"
-        >
-          <option value="1">CSE</option>
-          <option value="2">EE</option>
-          <option value="3">ECE</option>
-          <option value="4">CHE</option>
-          <option value="5">CE</option>
-          <option value="6">IT</option>
-          <option value="7">ME</option>
-        </select>
-      </div>
-      
+          <div class="select">
+            <select
+            id="branch"
+            name="branch"
+            class="choose-branch"
+            onchange="showbranch(value);"
+            >
+            <option value="1">CSE</option>
+            <option value="2">EE</option>
+            <option value="3">ECE</option>
+            <option value="4">CHE</option>
+            <option value="5">CE</option>
+            <option value="6">IT</option>
+            <option value="7">ME</option>
+          </select>
+        </div>
         </div>
       </div>
     </div>
-    <!-- </form> -->
-   
+    <!-- select code end -->
+    <!-- table to show all the semesters -->
     <div class="container cgpa-form">
       <div class="panel">
         <div class="table-responsive">
@@ -131,8 +134,8 @@
             </tr>
           </thead>
           <tr>
-        <div class="subject">
-          <p class="sub-1">
+          <div class="subject">
+            <p class="sub-1">
             <th><span>Semester 1</span></th>
             <th><input type="text" placeholder="Enter your SGPA" /></th>        
             <th><span>24</span></th>    
@@ -144,86 +147,88 @@
           <p class="sub-2 visibility">
            <th><span>Semester 2</span></th> 
            <th><input type="text" placeholder="Enter your SGPA" /></th>  
-          <th><span>25</span></th>  
+            <th><span>25</span></th>  
           </p>
         </div>
       </tr>
-        <tr>
+      <tr>
           <div class="subject">
-            <p class="sub-3 visibility">
+          <p class="sub-3 visibility">
           <th><span>Semester 3</span></th>   
           <th><input type="text" placeholder="Enter your SGPA" /></th>  
-            <th><span>21</span></th>  
-            </p>
+          <th><span>21</span></th>  
+          </p>
           </div>
-   
-        </tr>
-        <tr>        <div class="subject">
+      </tr>
+      <tr>
+          <div class="subject">
           <p class="sub-4 visibility">
           <th><span>Semester 4</span></th>       
-         <th><input type="text" placeholder="Enter your SGPA" /></th>   
+          <th><input type="text" placeholder="Enter your SGPA" /></th>   
           <th><span>23</span></th>  
           </p>
-        </div>
-        </tr>
-        <tr>
+          </div>
+      </tr>
+      <tr>
           <div class="subject">
-            <p class="sub-5 visibility">
-            <th><span>Semester 5</span></th>  
-            <th><input type="text" placeholder="Enter your SGPA" /></th>   
-            <th><span>5</span></th>  
-            </p>
+          <p class="sub-5 visibility">
+          <th><span>Semester 5</span></th>  
+          <th><input type="text" placeholder="Enter your SGPA" /></th>   
+          <th><span>5</span></th>  
+          </p>
+          </div>
+      </tr>
+      <tr>
+          <div class="subject">
+          <p class="sub-6 visibility">
+          <th><span>Semester 6</span></th>  
+          <th><input type="text" placeholder="Enter your SGPA" /></th>   
+          <th><span>21</span></th>  
+          </p>
+          </div>
+      </tr>
+      <tr>
+          <div class="subject">
+          <p class="sub-7 visibility">
+          <th><span>Semester 7</span></th>
+          <th><input type="text" placeholder="Enter your SGPA" /></th> 
+          <th><span>21</span></th>
+          </p>
+          </div>
+      </tr>
+      <tr>
+        <div class="subject">
+          <p class="sub-8 visibility">
+            <th><span>Semester 8</span></th>
+            <th><input type="text" placeholder="Enter your SGPA" /></th> 
+            <th><span>21</span></th>
+          </p>
           </div>
         </tr>
-        <tr>
-          <div class="subject">
-            <p class="sub-6 visibility">
-            <th><span>Semester 6</span></th>  
-            <th><input type="text" placeholder="Enter your SGPA" /></th>   
-            <th><span>21</span></th>  
-            </p>
-          </div>
-        </tr>
-        <tr>
-          <div class="subject">
-            <p class="sub-7 visibility">
-              <th><span>Semester 7</span></th>
-              <th><input type="text" placeholder="Enter your SGPA" /></th> 
-              <th><span>21</span></th>
-            </p>
-          </div>
-        </tr>
-        <tr>
-          <div class="subject">
-            <p class="sub-8 visibility">
-              <th><span>Semester 8</span></th>
-              <th><input type="text" placeholder="Enter your SGPA" /></th> 
-              <th><span>21</span></th>
-            </p>
-          </div>
-        </tr>
-        
       </div>
     </table>
   </div>
-      <div class="calculate">
+  <!-- table responsive div end -->
+  <div class="calculate">
         <button class="hit sns-btn">CALCULATE &nbsp;<i class="fa fa-calculator" aria-hidden="true"></i></button>
         <p>
           Dont know your sgpa of this sem ?
           <a href="form.html">Calculate it here </a>
         </p>
+        <!-- div for answer message -->
         <div class="ans">
           <p class="message">Congratulations Man! your CGPA is 9 and your elgible to apply for an interview.</p>
         </div>
       </div>
-     
-  
+      <!-- ans div end -->
     </div>
-  
+    <!-- panel div end -->
+  </div>
+  <!-- calcualte div end -->
 </main>
+<!-- foroter start -->
     <footer>
       <div class="row main-content">
-        <!-- <div class="main-content"> -->
         <div class="col-md-4">
           <div class="left box">
             <h2>Disclaimer</h2>
@@ -307,7 +312,6 @@
         </div>
         </div>
       </div>
-      
       <div class="bottom">
         <center>
           <span class="credit">Created by <a href="https://codersaty.github.io">Codersaty</a></span> |
@@ -316,47 +320,7 @@
         </center>
       </div>
     </footer>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-      
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-
-
-
-
-    </script>
-    <script src="js/appcgpa.js"></script>
-     <!-- for excel sheet -->
-     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxsst6V79vcOTqooF5MFkENLn9xwewxvmKJuNaEHXTSS1gja4yk/exec'
-      const form = document.forms['google-sheet']
     
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => happen())
-          .catch(error => console.error('Error!', error.message))
-      });
-      function happen()
-            {
-                const a=document.forms['google-sheet'];
-                form.classList.add('visibility');
-                const ab=document.querySelector('.form-message');
-                ab.classList.remove('visibility');
-
-            }
-    </script>
     
       <!-- div for share  -->
       <div class="share">
@@ -367,14 +331,12 @@ function closeNav() {
             <button class="close-button"><i class="fa fa-times" aria-hidden="true"></i></button>
           </header>
           <div class="row target">
-            
-        <div class="col-sm-4 targeting">
+          <div class="col-sm-4 targeting">
           <!-- facebook start -->
           <div id="fb-root"></div>
             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0" nonce="dk63r2oJ"></script>
             <div class="fb-share-button" data-href="https://codersaty.github.io/cgpacalculator/index.html" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcodersaty.github.io%2Fcgpacalculator%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-            <!-- facebook end -->
-            
+            <!-- facebook end -->         
         </div>
         <div class="col-sm-4 targeting">
               <!-- Linkedin start -->
@@ -386,21 +348,24 @@ function closeNav() {
              <!-- twitter start -->
              <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Hi! I just found this awesome website " data-url="https://codersaty.github.io/cgpacalculator/" data-via="codersaty" data-hashtags="#webdevelopment #coding" data-show-count="false">Tweet</a>
              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-             <!-- twitter end -->
-          
+             <!-- twitter end -->          
         </div>            
           </div>
-         
           <!-- for dialog on fall back end -->
-          <!-- share button -->
-         
-          <!-- share button end -->
         </div>
+                  <!-- share button -->
         <button class="share-button" type="button" title="Share this website">
           <i class="fa fa-share-alt" aria-hidden="true"></i>
          </button>
+                   <!-- share button end -->
       </div>
-      <script src="js/script.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/appcgpa.js"></script>
   </body>
 </html>
 

@@ -89,7 +89,7 @@ header .container, .heading-continer {
 }
 
 
-.heading {
+/* .heading {
 
 
   padding: 2rem;
@@ -104,7 +104,7 @@ header .container, .heading-continer {
   text-transform: uppercase;
   color:#FFF;
 	text-shadow: 0 1px white, 0 3px #777;
-}
+} */
 .faq-heading
 {
   
@@ -118,7 +118,8 @@ header .container, .heading-continer {
 	line-height: 42px;
   text-transform: uppercase;
   color:#FFF;
-	text-shadow: 0 1px white, 0 3px #777;
+  text-shadow: 0 1px white, 0 3px #777;
+  margin-bottom:50px;
 
 }
 
