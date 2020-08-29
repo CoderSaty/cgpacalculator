@@ -21,7 +21,6 @@ left: 48%;
   width: 18px;
   height: 18px;
   background-color: rgb(238, 68, 51);
-
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
@@ -591,3 +590,48 @@ margin-top:10px;
       margin-left: 2rem;;
     }
   }
+  .share-button{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background-color:#000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    opacity:1;
+    font-size: 14px;
+    z-index:1;
+    transition: bottom 0.2s;
+    background-image: url(../assests/img/download.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.share-button:hover{
+  cursor:pointer;
+}
+.share-overlay{
+ 
+  opacity:1;
+  position:absolute;
+  z-index:0;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  display:none;
+}
+.share-nosupport{
+  position:absolute;
+  left:0;
+  right:0;
+  top:30%;
+  margin:0 auto;
+  z-index:1;
+  padding:10rem;
+  background:#fff;
+  color:#000;
+  display:none;
+}
+.show-share{
+  display:block;
+}

@@ -34,6 +34,18 @@
 
       </div>
     </div> -->
+    <div>
+
+      <button class="share-button" title="Share this website with your friends"></button>
+          </div>
+          <div class="share-overlay"></div>
+          <div class="share-nosupport">
+            <h2>Share now</h2>
+            <button>social link</button>
+            <button>social link</button>
+            <button>social link</button>
+            <button class="button" data-sharer="linkedin" data-url="https://ellisonleao.github.io/sharer.js/">Share on Linkedin</button>
+          </div>
     <header>
       <div class="container">
       <a href="http://www.mmmut.ac.in/"> <img
@@ -186,7 +198,7 @@
         </center>
       </div>
     </footer>
-
+  
     <!-- for google sheet -->
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxsst6V79vcOTqooF5MFkENLn9xwewxvmKJuNaEHXTSS1gja4yk/exec'
@@ -223,13 +235,44 @@
     <script>
       $(document).ready(function() {
       //Preloader
-      var preloaderFadeOutTime = 100;
+      var preloaderFadeOutTime = 300;
       function hidePreloader() {
       var preloader = $('.spinner-wrapper');
       preloader.fadeOut(preloaderFadeOutTime);
       }
       hidePreloader();
       });
+      </script>
+      <!-- code for share button -->
+      <script>
+        const sharebutton=document.querySelector('.share-button');
+        const shareoverlay=document.querySelector('.share-overlay');
+        const sharenosupprt=document.querySelector('.share-nosupport');
+        const title=window.document.title;
+        const url=window.document.location.href;
+        sharebutton.addEventListener('click',()=>{
+          if(navigator.share){
+              navigator.share({
+                title: `${title}`,
+                url: `${url}`
+              }).then(()=>{
+                console.log('Thanks for sharing');
+              })
+              .catch(console.error);
+
+          }
+          else{
+              shareoverlay.classList.add('show-share');
+              sharenosupport.classList.add('show-share');
+
+          }
+        });
+        shareoverlay.addEventListener('click',()=>{
+          shareoverlay.classList.remove('show-share');
+              sharenosupport.classList.remove('show-share');
+
+
+        });
       </script>
   </body>
 </html>
