@@ -117,6 +117,7 @@ function check(sem, branch) {
   var f = 0;
   var sgpa = 0,
     i;
+  console.log("hi");
   for (i = 1; i <= sem; i++) {
     a = document.querySelector(".sub-" + i).children;
     sgpa = a[1].children;
@@ -143,21 +144,22 @@ function check(sem, branch) {
   }
 }
 function result(sem, branch, f) {
-  var totalcredit = 0;
-  var totalobtained = 0;
-  for (var i = 1; i <= sem; i++) {
-    a = document.querySelector(".sub-" + i).children;
-    sgpa = a[1].children;
-    totalobtained += parseFloat(sgpa[0].value) * creditsdata[branch - 1][i - 1];
-    totalcredit += creditsdata[branch - 1][i - 1];
-    var ans = totalobtained / totalcredit;
-    if (f == 0) {
-      document.querySelector(".message").innerText = customMessage(ans, sem);
-      var message = document.querySelector(".message").parentElement;
-      message.classList.remove("visible");
-    } else {
-      alert("Please fill all the fields");
+  if (f == 0) {
+    var totalcredit = 0;
+    var totalobtained = 0;
+    for (var i = 1; i <= sem; i++) {
+      a = document.querySelector(".sub-" + i).children;
+      sgpa = a[1].children;
+      totalobtained +=
+        parseFloat(sgpa[0].value) * creditsdata[branch - 1][i - 1];
+      totalcredit += creditsdata[branch - 1][i - 1];
     }
+    var ans = totalobtained / totalcredit;
+    document.querySelector(".message").innerText = customMessage(ans, sem);
+    var message = document.querySelector(".message").parentElement;
+    message.classList.remove("visible");
+  } else {
+    alert("Please fill all the fields");
   }
 }
 function customMessage(cgpa, sem) {
