@@ -22,4 +22,7 @@ This awesome Web App was created for Calculating CGPA or SGPA of Madan Mohan Mal
 * Calculate Your CGPA simply Entering your SGPA of all previous and current semester.
 ![CGPA Page](https://github.com/MrTwinkleSharma/cgpacalculator/blob/master/assests/Sample%20CGPA%20Calc..JPG)
 
-## [Link to this Github Published WebApp](https://codersaty.github.io/cgpacalculator/)
+###### [Link to this Github Published WebApp](https://codersaty.github.io/cgpacalculator/)
+
+- Thanks to [MrTwinkleSharma](https://github.com/MrTwinkleSharma) for this readme.
+
